@@ -7,6 +7,7 @@ import com.wibmo.base.TestBase;
 import com.wibmo.page.HomePage;
 import com.wibmo.page.LoginPage;
 
+
 public class LoginPageTest extends TestBase{
 	
     LoginPage loginpage;
@@ -28,6 +29,8 @@ public class LoginPageTest extends TestBase{
     	homepage=loginpage.clickOnLoginBtn();
     	System.out.println("=====logged in=====");
     }
+    
+    
     
     
     

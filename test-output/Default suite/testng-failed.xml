@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.wibmo.test.HomePageTest">
+      <class name="com.wibmo.test.MobileRechargePayPageTest">
         <methods>
+          <include name="clickOnSelectOperator"/>
+          <include name="clickOnViewPlans"/>
           <include name="initialization"/>
-          <include name="tapOnDashBoard"/>
-          <include name="clickOnRechargeServices"/>
         </methods>
-      </class> <!-- com.wibmo.test.HomePageTest -->
+      </class> <!-- com.wibmo.test.MobileRechargePayPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

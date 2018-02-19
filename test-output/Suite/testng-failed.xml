@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.wibmo.test.RechargeServicesPageTest">
+        <methods>
+          <include name="initialization"/>
+          <include name="setUp"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- com.wibmo.test.RechargeServicesPageTest -->
+      <class name="com.wibmo.test.MobileRechargePayPageTest">
+        <methods>
+          <include name="clickOnSelectOperator"/>
+          <include name="clickOnViewPlans"/>
+        </methods>
+      </class> <!-- com.wibmo.test.MobileRechargePayPageTest -->
+      <class name="com.wibmo.test.HomePageTest">
+        <methods>
+          <include name="initialization"/>
+          <include name="setUp"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- com.wibmo.test.HomePageTest -->
+      <class name="com.wibmo.test.LoginPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- com.wibmo.test.LoginPageTest -->
+      <class name="com.wibmo.test.MobileRechargePageTest">
+        <methods>
+          <include name="initialization"/>
+          <include name="setUp"/>
+          <include name="clickOnMyNumber"/>
+        </methods>
+      </class> <!-- com.wibmo.test.MobileRechargePageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

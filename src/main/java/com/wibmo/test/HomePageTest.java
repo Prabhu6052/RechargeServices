@@ -37,13 +37,9 @@ public class HomePageTest extends TestBase{
     	homepage.dashBoard();
     	System.out.println("====tapped twice on dashboard====");
     	
-    }
-    
-    @Test(priority=2)
-    public void clickOnRechargeServices()
-    {
     	homepage.clickOnRechargeIcon();
     	System.out.println("====clicked on recharge service====");
+    	
     }
     
 }

@@ -38,13 +38,4 @@ public class RechargeServicesPageTest extends TestBase{
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-
 }

@@ -1,15 +1,14 @@
 package com.wibmo.base;
 
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -19,6 +18,8 @@ public class TestBase {
 	
 	//Set up desired capabilities 
 	DesiredCapabilities capabilities = new DesiredCapabilities();
+	
+	AppiumDriverLocalService service;
 	
 	
 	public TestBase()
@@ -30,6 +31,9 @@ public class TestBase {
 	@BeforeClass
 	public void setUp()
 	{
+	    service = AppiumDriverLocalService.buildDefaultService();
+		service.start();
+
 		capabilities.setCapability("BROWSER_NAME", "");
 		capabilities.setCapability("platformVersion", "6.0"); 
 		capabilities.setCapability("deviceName","Cloud Fame 4G");
@@ -41,7 +45,7 @@ public class TestBase {
 		
 		//It will launch the App in Android Device using the configurations specified in Desired Capabilities
 			try {
-				driver =   new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+				driver =   new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 			} catch (MalformedURLException e) {
 				e.printStackTrace();
 			}
@@ -50,11 +54,15 @@ public class TestBase {
 		
 	}
 
-	/*
+	
 	@AfterClass
 	public void close() throws Exception
 	 {
-		 Thread.sleep(6000);
+		 System.out.println("=====stop driver=====");
+		 Thread.sleep(5000);
 		 driver.quit();
-	 }*/
+		 
+		 System.out.println("=====stop server=====");
+		 service.stop();
+	 }
 }

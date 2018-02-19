@@ -26,22 +26,21 @@ public class MobileRechargePageTest extends TestBase{
 	public void initialization() throws Exception
 	{
 		loginpage=new LoginPage();
+		mobilerechargepage=new MobileRechargePage();
 		loginpage.login();
 		homepage=loginpage.clickOnLoginBtn();
 		homepage.dashBoard();
 		rechargeservicespage=homepage.clickOnRechargeIcon();
 		rechargeservicespage.selectMobileRecharge();
-		
+				
 	}
 	
 	@Test
 	public void clickOnMyNumber()
 	{
-		mobilerechargepage.selectMobileNumbersFromDropdown();
+		mobilerechargepage.enterMobileNumber();
 		
 	}
-	
-	
 	
 	
 	
