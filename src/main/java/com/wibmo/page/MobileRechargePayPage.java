@@ -5,7 +5,6 @@ import java.io.IOException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.DataProvider;
 
 import com.wibmo.base.TestBase;
 import com.wibmo.util.Testutil;
@@ -54,11 +53,20 @@ public class MobileRechargePayPage extends TestBase{
 	
 	}
 	
+	public void selectPrepaidOrPostpaidService(String service)
+	{
+		prepaidPostpaidSpinner.click();
+		Testutil.scroll(driver, service).click();
+	}
+	
 	public void selectViewPlan() throws IOException
 	{
-		viewPlans.click();
-
-		selectPlan.click();
+	 //	viewPlans.click();
+        amount.click();
+        amount.clear();
+        amount.sendKeys("10");
+        
+	//	selectPlan.click();
 		System.out.println("recharge amount= "+amount.getText());
 		
 	}

@@ -1,8 +1,11 @@
 package com.wibmo.page;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.wibmo.base.TestBase;
 
@@ -34,9 +37,9 @@ public class RechargeServicesPage extends TestBase{
 	
 	public void selectMobileRecharge() throws Exception
 	{
-		Thread.sleep(5000);
-		mobileRecharge.click();
-		
+		element = (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(mobileRecharge));
+		element.click();	
+
 	}
 	
 	public void selectDataCardRecharge() throws Exception

@@ -5,9 +5,7 @@
     <classes>
       <class name="com.wibmo.test.RechargeServicesPageTest">
         <methods>
-          <include name="initialization"/>
-          <include name="setUp"/>
-          <include name="close"/>
+          <include name="clickOnMobileRecharge"/>
         </methods>
       </class> <!-- com.wibmo.test.RechargeServicesPageTest -->
       <class name="com.wibmo.test.MobileRechargePayPageTest">
@@ -18,21 +16,17 @@
       </class> <!-- com.wibmo.test.MobileRechargePayPageTest -->
       <class name="com.wibmo.test.HomePageTest">
         <methods>
-          <include name="initialization"/>
-          <include name="setUp"/>
-          <include name="close"/>
+          <include name="tapOnDashBoard"/>
         </methods>
       </class> <!-- com.wibmo.test.HomePageTest -->
       <class name="com.wibmo.test.LoginPageTest">
         <methods>
+          <include name="enterLoginCredentials"/>
           <include name="setUp"/>
-          <include name="close"/>
         </methods>
       </class> <!-- com.wibmo.test.LoginPageTest -->
       <class name="com.wibmo.test.MobileRechargePageTest">
         <methods>
-          <include name="initialization"/>
-          <include name="setUp"/>
           <include name="clickOnMyNumber"/>
         </methods>
       </class> <!-- com.wibmo.test.MobileRechargePageTest -->

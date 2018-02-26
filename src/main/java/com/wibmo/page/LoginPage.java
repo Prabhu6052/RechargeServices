@@ -57,8 +57,15 @@ public class LoginPage extends TestBase{
 		} 
     	loginBtn.click();
     	Thread.sleep(3000);
+
     	
 		return new HomePage(); 
     }
+    
+    public String verifyHomePageTitle()
+    {
+    	return driver.getTitle();
+    }
+    
 
 }

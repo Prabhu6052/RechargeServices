@@ -1,10 +1,11 @@
 package com.wibmo.test;
 
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import org.testng.log4testng.Logger;
 
 import com.wibmo.base.TestBase;
 import com.wibmo.page.HomePage;
@@ -20,6 +21,8 @@ public class MobileRechargePayPageTest extends TestBase {
 	
 	String sheetName1="Sheet1";
 	
+	Logger log;
+	
 	LoginPage loginpage;
 	HomePage homepage;
 	RechargeServicesPage rechargeservicespage;
@@ -27,6 +30,7 @@ public class MobileRechargePayPageTest extends TestBase {
 	MobileRechargePayPage mobilerechargepaypage;
 	IAPPage iappage;
 	PaymentPage paymentpage;
+	MobileRechargePayPageTest rechrage;
 	
 	
 	public MobileRechargePayPageTest()
@@ -35,9 +39,10 @@ public class MobileRechargePayPageTest extends TestBase {
 	}
 	
 	
-	@BeforeClass
+	
 	public void initialization() throws Exception
 	{
+		System.out.println("=====start of  Initialization method=====");
 		iappage=new IAPPage();
 		paymentpage=new PaymentPage();
 		loginpage=new LoginPage();
@@ -62,8 +67,13 @@ public class MobileRechargePayPageTest extends TestBase {
 	}
 	
 	@Test(priority=1, dataProvider="getOperatorTestData")
-	public void clickOnSelectOperator(String operat) throws Exception
+	public void TC_01(String operat) throws Exception
 	{
+		
+		initialization();
+		
+		System.out.println("=====first Initialization method called=====");
+		
 		mobilerechargepaypage.selectOperator(operat);
 		System.out.println("=====operators have been selected=====");
 		
@@ -77,13 +87,27 @@ public class MobileRechargePayPageTest extends TestBase {
 		Thread.sleep(5000);
 		
 		paymentpage.enterPasswordAndClickOnSubmit();
+	
+		Thread.sleep(5000);
+		
+		Testutil.takeScreenShot();
+		
+		homepage.clickOnLogoutLink();
+		
+		Thread.sleep(5000);
+		
 	}
 	
 	
 	@Test(priority=2)
-	public void clickOnViewPlans(String operat) throws Exception
+	public void TC_02() throws Exception
 	{
-		mobilerechargepage.selectPostPaidService();
+		Thread.sleep(2000);
+		initialization();
+		
+		System.out.println("=====second Initialization method called=====");
+		
+		mobilerechargepaypage.selectPrepaidOrPostpaidService("Postpaid");
 		
 		mobilerechargepaypage.selectOperator("Airtel");
 		System.out.println("=====operators have been selected=====");
@@ -98,6 +122,7 @@ public class MobileRechargePayPageTest extends TestBase {
 		Thread.sleep(5000);
 		
 		paymentpage.enterPasswordAndClickOnSubmit();
+		
 	}
 	
 	
@@ -142,12 +167,12 @@ public class MobileRechargePayPageTest extends TestBase {
 */
 	
 	
-	@AfterClass
+/*	@AfterTest
 	public void close() throws Exception
 	{
-		Thread.sleep(3000);
+		//Thread.sleep(000);
 		driver.close();
 	}
-	
+	*/
 
 }

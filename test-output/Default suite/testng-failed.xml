@@ -5,9 +5,10 @@
     <classes>
       <class name="com.wibmo.test.MobileRechargePayPageTest">
         <methods>
-          <include name="clickOnSelectOperator"/>
-          <include name="clickOnViewPlans"/>
-          <include name="initialization"/>
+          <include name="TC_01" invocation-numbers="0"/>
+          <include name="setUp"/>
+          <include name="close"/>
+          <include name="TC_02"/>
         </methods>
       </class> <!-- com.wibmo.test.MobileRechargePayPageTest -->
     </classes>

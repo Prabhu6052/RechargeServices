@@ -8,8 +8,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -17,6 +15,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.wibmo.base.TestBase;
 
@@ -24,6 +24,7 @@ public class Testutil extends TestBase{
 	
 	public static Workbook book;
 	public static Sheet sheet;
+	public static WebElement element1;
 	
 	public static String sheetPath="C:\\Users\\prabhu.basavaraj\\workspace\\RechargeServices\\src\\main\\java\\com\\wibmo\\testdata\\operatorstestdata.xls";
 	
@@ -48,7 +49,12 @@ public class Testutil extends TestBase{
        return ((AndroidDriver)driver).findElementByAndroidUIAutomator(scrollable);
        
     }
-
+	
+	
+	
+	//Fluent Wait
+	
+	
 	
 	//exceldata method
 	public static Object[][] getTestData(String sheetName)
