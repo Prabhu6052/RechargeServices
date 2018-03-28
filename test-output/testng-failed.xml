@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.wibmo.test.MobileRechargePayPageTest">
+      <class name="com.wibmo.test.DTHRechargePayPageTest">
         <methods>
-          <include name="TC_01" invocation-numbers="0"/>
+          <include name="TC_DTH_01"/>
           <include name="setUp"/>
           <include name="close"/>
-          <include name="TC_02"/>
         </methods>
-      </class> <!-- com.wibmo.test.MobileRechargePayPageTest -->
+      </class> <!-- com.wibmo.test.DTHRechargePayPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

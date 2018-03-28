@@ -9,11 +9,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.wibmo.base.TestBase;
+import com.wibmo.base.BasePage;
 import com.wibmo.config.EnvironmentVariables;
 import com.wibmo.util.Testutil;
 
-public class IAPPage extends TestBase{
+public class IAPPage extends BasePage{
 	
 	Testutil testutil;
 	

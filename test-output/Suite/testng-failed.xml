@@ -3,33 +3,19 @@
 <suite name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="com.wibmo.test.RechargeServicesPageTest">
+      <class name="com.wibmo.test.DataCardRechargePayPageTest">
         <methods>
-          <include name="clickOnMobileRecharge"/>
+          <include name="setUp"/>
+          <include name="close"/>
         </methods>
-      </class> <!-- com.wibmo.test.RechargeServicesPageTest -->
+      </class> <!-- com.wibmo.test.DataCardRechargePayPageTest -->
       <class name="com.wibmo.test.MobileRechargePayPageTest">
         <methods>
-          <include name="clickOnSelectOperator"/>
-          <include name="clickOnViewPlans"/>
+          <include name="TC_03"/>
+          <include name="setUp"/>
+          <include name="close"/>
         </methods>
       </class> <!-- com.wibmo.test.MobileRechargePayPageTest -->
-      <class name="com.wibmo.test.HomePageTest">
-        <methods>
-          <include name="tapOnDashBoard"/>
-        </methods>
-      </class> <!-- com.wibmo.test.HomePageTest -->
-      <class name="com.wibmo.test.LoginPageTest">
-        <methods>
-          <include name="enterLoginCredentials"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.wibmo.test.LoginPageTest -->
-      <class name="com.wibmo.test.MobileRechargePageTest">
-        <methods>
-          <include name="clickOnMyNumber"/>
-        </methods>
-      </class> <!-- com.wibmo.test.MobileRechargePageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

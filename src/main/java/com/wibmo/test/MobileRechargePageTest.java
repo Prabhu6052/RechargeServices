@@ -4,13 +4,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.wibmo.base.TestBase;
+import com.wibmo.base.BasePage;
 import com.wibmo.page.HomePage;
 import com.wibmo.page.LoginPage;
 import com.wibmo.page.MobileRechargePage;
 import com.wibmo.page.RechargeServicesPage;
 
-public class MobileRechargePageTest extends TestBase{
+public class MobileRechargePageTest extends BasePage{
 	
 	LoginPage loginpage;
 	HomePage homepage;
@@ -19,7 +19,7 @@ public class MobileRechargePageTest extends TestBase{
 	
 	public MobileRechargePageTest()
 	{
-		mobilerechargepage=PageFactory.initElements(TestBase.driver, MobileRechargePage.class);
+		mobilerechargepage=PageFactory.initElements(BasePage.driver, MobileRechargePage.class);
 	}
 	
 	@BeforeClass
@@ -29,7 +29,7 @@ public class MobileRechargePageTest extends TestBase{
 		mobilerechargepage=new MobileRechargePage();
 		loginpage.login();
 		homepage=loginpage.clickOnLoginBtn();
-		homepage.dashBoard();
+	//	homepage.dashBoard();
 		rechargeservicespage=homepage.clickOnRechargeIcon();
 		rechargeservicespage.selectMobileRecharge();
 				

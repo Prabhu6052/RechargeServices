@@ -7,10 +7,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.wibmo.base.TestBase;
+import com.wibmo.base.BasePage;
 import com.wibmo.util.Testutil;
 
-public class PaymentPage extends TestBase{
+public class PaymentPage extends BasePage{
 	
 	public PaymentPage()
 	{

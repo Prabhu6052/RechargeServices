@@ -1,12 +1,15 @@
 package com.wibmo.page;
 
+
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
-import com.wibmo.base.TestBase;
+import com.wibmo.base.BasePage;
 
-public class LoginPage extends TestBase{
+public class LoginPage extends BasePage{
 	
 	@FindBy(name="1")
 	private WebElement one;
@@ -23,19 +26,15 @@ public class LoginPage extends TestBase{
 	@FindBy(name="Login")
 	private WebElement loginBtn;
 	
-	public LoginPage()
+	public LoginPage(WebDriver driver)
 	{
+		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 	
 	
 	public void login() throws Exception
-	{
-	 /*	WebElement element1;
-		wait=new WebDriverWait(driver,20); 
-		element1=wait.until(ExpectedConditions.visibilityOfElementLocated(one));
-		element1.click();  */
-		
+	{	
 		Thread.sleep(5000);
 		one.click();
 		
@@ -55,6 +54,8 @@ public class LoginPage extends TestBase{
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} 
+    	
+    	Assert.assertTrue(loginBtn.isDisplayed(), "Login Button is not displayed");
     	loginBtn.click();
     	Thread.sleep(3000);
 
@@ -62,10 +63,7 @@ public class LoginPage extends TestBase{
 		return new HomePage(); 
     }
     
-    public String verifyHomePageTitle()
-    {
-    	return driver.getTitle();
-    }
+   
     
 
 }

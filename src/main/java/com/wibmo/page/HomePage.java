@@ -10,9 +10,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import com.wibmo.base.TestBase;
+import com.wibmo.base.BasePage;
 
-public class HomePage extends TestBase{
+public class HomePage extends BasePage{
 	
 	@FindBy(id="image_bill_pay")
 	private WebElement rechargeIcon;
@@ -32,7 +32,7 @@ public class HomePage extends TestBase{
 	}
 	
 		
-	public void dashBoard() 
+/*	public void dashBoard() 
 	{
 		try {
 			Thread.sleep(6000);
@@ -45,18 +45,18 @@ public class HomePage extends TestBase{
 		}
 			
 	}
-	
-	public String verifyHomePageTitle()
+*/
+	public void verifyHomePageTitle()
     {
 	
-    	String title=homepageTitle.getText();
+		Assert.assertTrue("PayZapp home page title is not displayed", homepageTitle.isDisplayed());
     	
-        return title;
     }
     
 	
 	public RechargeServicesPage clickOnRechargeIcon()
 	{
+		 Assert.assertTrue("Recharge Icon is not displayed", rechargeIcon.isDisplayed());
 		 element = (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(rechargeIcon));
 		 element.click();
 		

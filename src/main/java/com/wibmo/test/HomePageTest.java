@@ -5,24 +5,24 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.wibmo.base.TestBase;
+import com.wibmo.base.BasePage;
 import com.wibmo.page.HomePage;
 import com.wibmo.page.LoginPage;
 
-public class HomePageTest extends TestBase{
+public class HomePageTest extends BasePage{
 	
 	LoginPage loginpage;
     HomePage homepage;
     
     public HomePageTest() 
 	{
-    	  homepage=PageFactory.initElements(TestBase.driver, HomePage.class);	
+    	  homepage=PageFactory.initElements(BasePage.driver, HomePage.class);	
 	}
 
     @BeforeClass
     public void initialization() throws InterruptedException
     {
-    	loginpage=new LoginPage();
+    	loginpage=new LoginPage(driver);
     	try {
 			loginpage.login();
 		} catch (Exception e) {
@@ -38,8 +38,8 @@ public class HomePageTest extends TestBase{
     	String title=homepage.verifyHomePageTitle();
     	Assert.assertEquals(title, "PayZapp Home");
     	
-    	homepage.dashBoard();
-    	System.out.println("====tapped twice on dashboard====");
+    //	homepage.dashBoard();
+    //	System.out.println("====tapped twice on dashboard====");
     	
     	
     	homepage.clickOnRechargeIcon();

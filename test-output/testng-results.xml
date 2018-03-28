@@ -1,85 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="2" passed="0">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="103854" started-at="2018-02-26T13:25:11Z" finished-at="2018-02-26T13:26:55Z">
+  <suite name="Default suite" duration-ms="42857" started-at="2018-03-02T12:40:42Z" finished-at="2018-03-02T12:41:25Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="103854" started-at="2018-02-26T13:25:11Z" finished-at="2018-02-26T13:26:55Z">
-      <class name="com.wibmo.test.MobileRechargePayPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.wibmo.test.MobileRechargePayPageTest@3a883ce7]" name="setUp" is-config="true" duration-ms="22292" started-at="2018-02-26T18:55:11Z" finished-at="2018-02-26T18:55:33Z">
+    <test name="Default test" duration-ms="42857" started-at="2018-03-02T12:40:42Z" finished-at="2018-03-02T12:41:25Z">
+      <class name="com.wibmo.test.DTHRechargePayPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.wibmo.test.DTHRechargePayPageTest@3cef309d]" name="setUp" is-config="true" duration-ms="40768" started-at="2018-03-02T18:10:42Z" finished-at="2018-03-02T18:11:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="TC_01(java.lang.String)[pri:0, instance:com.wibmo.test.MobileRechargePayPageTest@3a883ce7]" name="TC_01" duration-ms="51824" started-at="2018-02-26T18:55:34Z" data-provider="getOperatorTestData" finished-at="2018-02-26T18:56:25Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Tata indicom]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[An unknown server-side error occurred while processing the command. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
-System info: host: 'WIB-DES-00840', ip: '172.31.2.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {BROWSER_NAME: , appActivity: com.enstage.wibmo.main.Main..., appPackage: com.enstage.wibmo.staging.hdfc, browserName: Android, databaseEnabled: false, desired: {BROWSER_NAME: , appActivity: com.enstage.wibmo.main.Main..., appPackage: com.enstage.wibmo.staging.hdfc, deviceName: Cloud Fame 4G, platformName: Android, platformVersion: 6.0}, deviceName: 0123456789ABCDEF, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: LINUX, platformVersion: 6.0, takesScreenshot: true, warnings: {}, webStorageEnabled: false}
-Session ID: 09f9df03-d3c4-4cee-a0a8-db0745414e97
-*** Element info: {Using=id, value=image_bill_pay}]]>
-            </message>
+        <test-method status="FAIL" signature="TC_DTH_01()[pri:0, instance:com.wibmo.test.DTHRechargePayPageTest@3cef309d]" name="TC_DTH_01" duration-ms="5" started-at="2018-03-02T18:11:23Z" finished-at="2018-03-02T18:11:23Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
-System info: host: 'WIB-DES-00840', ip: '172.31.2.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {BROWSER_NAME: , appActivity: com.enstage.wibmo.main.Main..., appPackage: com.enstage.wibmo.staging.hdfc, browserName: Android, databaseEnabled: false, desired: {BROWSER_NAME: , appActivity: com.enstage.wibmo.main.Main..., appPackage: com.enstage.wibmo.staging.hdfc, deviceName: Cloud Fame 4G, platformName: Android, platformVersion: 6.0}, deviceName: 0123456789ABCDEF, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: LINUX, platformVersion: 6.0, takesScreenshot: true, warnings: {}, webStorageEnabled: false}
-Session ID: 09f9df03-d3c4-4cee-a0a8-db0745414e97
-*** Element info: {Using=id, value=image_bill_pay}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:89)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:416)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:301)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:43)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:284)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:672)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:668)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	at com.wibmo.page.HomePage.clickOnRechargeIcon(HomePage.java:60)
-	at com.wibmo.test.MobileRechargePayPageTest.initialization(MobileRechargePayPageTest.java:54)
-	at com.wibmo.test.MobileRechargePayPageTest.TC_01(MobileRechargePayPageTest.java:73)
+              <![CDATA[java.lang.NullPointerException
+	at com.wibmo.test.DTHRechargePayPageTest.initialization(DTHRechargePayPageTest.java:42)
+	at com.wibmo.test.DTHRechargePayPageTest.TC_DTH_01(DTHRechargePayPageTest.java:58)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -106,100 +43,15 @@ Session ID: 09f9df03-d3c4-4cee-a0a8-db0745414e97
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_01 -->
-        <test-method status="FAIL" signature="TC_02()[pri:0, instance:com.wibmo.test.MobileRechargePayPageTest@3a883ce7]" name="TC_02" duration-ms="27465" started-at="2018-02-26T18:56:25Z" finished-at="2018-02-26T18:56:53Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[An unknown server-side error occurred while processing the command. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
-System info: host: 'WIB-DES-00840', ip: '172.31.2.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {BROWSER_NAME: , appActivity: com.enstage.wibmo.main.Main..., appPackage: com.enstage.wibmo.staging.hdfc, browserName: Android, databaseEnabled: false, desired: {BROWSER_NAME: , appActivity: com.enstage.wibmo.main.Main..., appPackage: com.enstage.wibmo.staging.hdfc, deviceName: Cloud Fame 4G, platformName: Android, platformVersion: 6.0}, deviceName: 0123456789ABCDEF, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: LINUX, platformVersion: 6.0, takesScreenshot: true, warnings: {}, webStorageEnabled: false}
-Session ID: 09f9df03-d3c4-4cee-a0a8-db0745414e97
-*** Element info: {Using=name, value=1}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
-System info: host: 'WIB-DES-00840', ip: '172.31.2.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {BROWSER_NAME: , appActivity: com.enstage.wibmo.main.Main..., appPackage: com.enstage.wibmo.staging.hdfc, browserName: Android, databaseEnabled: false, desired: {BROWSER_NAME: , appActivity: com.enstage.wibmo.main.Main..., appPackage: com.enstage.wibmo.staging.hdfc, deviceName: Cloud Fame 4G, platformName: Android, platformVersion: 6.0}, deviceName: 0123456789ABCDEF, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: LINUX, platformVersion: 6.0, takesScreenshot: true, warnings: {}, webStorageEnabled: false}
-Session ID: 09f9df03-d3c4-4cee-a0a8-db0745414e97
-*** Element info: {Using=name, value=1}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:89)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:448)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByName(DefaultGenericMobileDriver.java:110)
-	at io.appium.java_client.AppiumDriver.findElementByName(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementByName(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ByName.findElement(By.java:303)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.wibmo.page.LoginPage.login(LoginPage.java:40)
-	at com.wibmo.test.MobileRechargePayPageTest.initialization(MobileRechargePayPageTest.java:51)
-	at com.wibmo.test.MobileRechargePayPageTest.TC_02(MobileRechargePayPageTest.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_02 -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.wibmo.test.MobileRechargePayPageTest@3a883ce7]" name="close" is-config="true" duration-ms="2070" started-at="2018-02-26T18:56:53Z" finished-at="2018-02-26T18:56:55Z">
+        </test-method> <!-- TC_DTH_01 -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.wibmo.test.DTHRechargePayPageTest@3cef309d]" name="close" is-config="true" duration-ms="2051" started-at="2018-03-02T18:11:23Z" finished-at="2018-03-02T18:11:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- com.wibmo.test.MobileRechargePayPageTest -->
+      </class> <!-- com.wibmo.test.DTHRechargePayPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

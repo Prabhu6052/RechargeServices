@@ -6,10 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.wibmo.base.TestBase;
+import com.wibmo.base.BasePage;
 import com.wibmo.util.Testutil;
 
-public class MobileRechargePayPage extends TestBase{
+public class MobileRechargePayPage extends BasePage{
 	
 	public Testutil testutil;
 
@@ -65,9 +65,8 @@ public class MobileRechargePayPage extends TestBase{
         amount.click();
         amount.clear();
         amount.sendKeys("10");
-        
-	//	selectPlan.click();
 		System.out.println("recharge amount= "+amount.getText());
+		driver.navigate().back();
 		
 	}
 	

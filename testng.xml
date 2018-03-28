@@ -3,11 +3,8 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-      <class name="com.wibmo.test.LoginPageTest"/>
-      <class name="com.wibmo.test.HomePageTest"/>
-      <class name="com.wibmo.test.RechargeServicesPageTest"/>
-      <class name="com.wibmo.test.MobileRechargePageTest"/>
        <class name="com.wibmo.test.MobileRechargePayPageTest"/>
+       <class name="com.wibmo.test.DataCardRechargePayPageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
